@@ -66,7 +66,8 @@ function ShowTask(){
 
 }
 function Savedata(){
-    const taskname = Taskinfo();
+    let ET = 0
+    const task = Taskinfo();
     const localStorageData = localStorage.getItem("todoList");
     let taskNames;
     if(localStorageData === null){
@@ -75,8 +76,14 @@ function Savedata(){
     else{
         taskNames = JSON.parse(localStorageData);
     }
-    
-    taskNames.push(taskname);
+    taskNames.forEach(e=>{
+       if(e.taskName == task.taskName){
+        ET =1
+       }
+    })
+    if (ET == 0){
+        taskNames.push(task);
+    }
     localStorage.setItem("todoList",JSON.stringify(taskNames));
 
 }
