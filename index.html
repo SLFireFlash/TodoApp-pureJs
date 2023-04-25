@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">TODO App</div>
+        <div class="content">
+            <div class="task-data">
+                <label for="task-name">Set Task Naeme</label>
+                <input type="text" placeholder="Task Name" name="task-name" id="id-task-name">
+                <label for="task-dip">Set task discription</label>
+                <input type="text" placeholder="Task Discription" name="task-dip" id="id-task-dip">
+                <label for="datetime">Set time and date</label>
+                <input type="datetime-local" name="task-datetime" id="id-task-datetime">
+                <button type="button" name="btn-add-task" id="id-btn-add-task">Add Todo</button>
+            </div>
+        </div>
+        <div class="added-task">
+            <div class="added-task-title" style="margin-top: 20px;">My Tasks</div>
+            <div class="task-content">
+                <input type="radio" name="select-task">
+                <div class="task-info">
+                    <label for="task-name-info">My Task 01</label>
+                    <label for="task-date-info">2032-05-11</label>
+                </div>
+            </div>
+            <div class="task-content">
+                <input type="radio" name="select-task">
+                <div class="task-info">
+                    <label for="task-name-info">My Task 02</label>
+                    <label for="task-date-info">2032-05-11</label>
+                </div>
+            </div>
+            <div class="task-content">
+                <input type="radio" name="select-task">
+                <div class="task-info">
+
+                    <label for="task-name-info">My Task 03</label>
+                    <label for="task-date-info">2032-05-11</label>
+                </div>
+            </div>
+        </div>
+        <div class="task-manager">
+            <div class="title">Manage task</div>
+            <div class="btn-manage">
+                <button type="button" name="edit-task" id="id-task-edit">Edit Task</button>
+                <button type="button" name="manage-task" id="id-btn-task-manage">remove task</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
