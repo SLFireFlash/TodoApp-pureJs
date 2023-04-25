@@ -1,6 +1,6 @@
 #todo app(pure js)
 <dl>
-<dt>pure js</dt>
+<dt>main Task</dt>
 	<dd>ake todo app useing pure js
 <dt>app info</dt>
     <dd>user can add new task and discription</dd>
