@@ -1,3 +1,4 @@
+let taskObj = [];
 function Taskinfo(){
     const taskName = document.getElementById("id-task-name").value;
     const taskDip = document.getElementById("id-task-dip").value;
@@ -65,16 +66,25 @@ function ShowTask(){
 
 }
 function Savedata(){
-    const taskinfo = Taskinfo()
-    const strObj = JSON.stringify(taskinfo)
-    localStorage.setItem('todoList',strObj)
-    console.log(localStorage)
+    const taskname = Taskinfo();
+    const localStorageData = localStorage.getItem("todoList");
+    let taskNames;
+    if(localStorageData === null){
+        taskNames =[]
+    }
+    else{
+        taskNames = JSON.parse(localStorageData);
+    }
+    
+    taskNames.push(taskname);
+    localStorage.setItem("todoList",JSON.stringify(taskNames));
 
 }
 function retriveData(){
     let localdata = JSON.parse(localStorage.getItem('todoList'));
-    console.log("retrive : " + localdata.taskName)
-
+    localdata.forEach(e=>{
+        console.log(e.taskName);
+    })
 
 }
 
