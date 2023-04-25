@@ -1,4 +1,4 @@
-function addtask(){
+function Taskinfo(){
     const taskName = document.getElementById("id-task-name").value;
     const taskDip = document.getElementById("id-task-dip").value;
     const time = document.getElementById("id-task-date").value;
@@ -11,13 +11,9 @@ function addtask(){
     }
     return taskInfo;
 }
-function showTask(){
+function ShowTask(){
     const addedtask = document.getElementById("id-added-task-title");
-    const taskdata = addtask()
-    console.log(taskdata.taskName)
-    console.log(taskdata.taskDiscription)
-    console.log(taskdata.taskDate)
-    console.log(taskdata.taskTime)
+    const taskdata = Taskinfo()
 
     //div class task content
     const TaskContent =document.createElement("div");
@@ -67,6 +63,23 @@ function showTask(){
     //add task component to html page
     addedtask.appendChild(TaskContent)
 
+}
+function Savedata(){
+    const taskinfo = Taskinfo()
+    const strObj = JSON.stringify(taskinfo)
+    localStorage.setItem('todoList',strObj)
+    console.log(localStorage)
+
+}
+function retriveData(){
+    let localdata = JSON.parse(localStorage.getItem('todoList'));
+    console.log("retrive : " + localdata.taskName)
 
 
 }
+
+
+// console.log(taskdata.taskName)
+// console.log(taskdata.taskDiscription)
+// console.log(taskdata.taskDate)
+// console.log(taskdata.taskTime)

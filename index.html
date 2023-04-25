@@ -20,18 +20,18 @@
                 <input type="date" name="task-date" id="id-task-date">
                 <label for="datetime">Set time</label>
                 <input type="time" name="task-time" id="id-task-time">
-                <button type="button" name="btn-add-task" onclick="showTask()" id="id-btn-add-task">Add Todo</button>
+                <button type="button" name="btn-add-task" onclick="ShowTask()" id="id-btn-add-task">Add Todo</button>
             </div>
         </div>
         <div class="added-task">
             <div class="added-task-title" id="id-added-task-title" style="margin-top: 20px;">My Tasks</div>
-            
+
         </div>
         <div class="task-manager">
             <div class="title">Manage task</div>
             <div class="btn-manage">
-                <button type="button" name="edit-task" id="id-task-edit">Edit Task</button>
-                <button type="button" name="manage-task" id="id-btn-task-manage">remove task</button>
+                <button type="button" name="edit-task" onclick="Savedata()" id="id-task-edit">save Task</button>
+                <button type="button" name="manage-task" onclick="retriveData()" id="id-btn-task-manage">get task</button>
             </div>
         </div>
     </div>
